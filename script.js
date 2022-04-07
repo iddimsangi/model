@@ -17,3 +17,10 @@ for (let i = 0; i < showModalBtn.length; i++) {
   showModalBtn[i].addEventListener('click', modelOpenHandler);
 }
 closeButn.addEventListener('click', modelCloseHandler);
+overLay.addEventListener('click', modelCloseHandler);
+
+document.addEventListener('keydown', e => {
+  console.log(e.key);
+  console.log(e);
+  if (e.key === 'Escape') modelCloseHandler();
+});
